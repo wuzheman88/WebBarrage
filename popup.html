@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <!-- <link rel="stylesheet" href="main.css"> -->
+  <!-- <link rel="stylesheet" href="mystique.css"> -->
+</head>
+<body>
+    <div id="app">
+      <h1 class="title-box">flexbox对齐就是这么简单</h1>
+    </div>
+    <div id="type-select">
+      <select v-model="selected">
+        <option v-for="option in options" v-bind:value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
+      <!-- <span>Selected: {{ selected }}</span> -->
+      <div class="resule-preview">
+        <div v-bind:class="selected" class="cols">
+          <div class="col col-3">
+            <p>对齐</p>
+          </div>
+          <div class="col col-3">
+            <p>对齐</p>
+          </div>
+          <div class="col col-3">
+            <p>对齐</p>
+          </div>
+        </div>
+      </div>
+      <div class="resule-code">
+        <pre class="code-display">
+          <code class="code-lang">
+            {{ cssMsg }}
+          </code>
+        </pre>
+      </div>
+    </div>
+    <!-- 先引入 Vue -->
+    <!-- <script src="vue.js"></script> -->
+    <!-- 引入组件库 -->
+    <!-- <script src="main.js"></script> -->
+</body>
+</html>
